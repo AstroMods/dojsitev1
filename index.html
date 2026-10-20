@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DOJ Digital Command</title>
+<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<div id="banner" class="banner" hidden></div>
+<div class="shell">
+  <aside id="sidebar" class="sidebar"><div class="brand"><span class="seal">⚖</span><div><b>DOJ Digital Command</b><small>Garden State Collective</small></div></div><nav id="nav"></nav></aside>
+  <div class="main">
+    <header class="topbar">
+      <button id="menuBtn" class="btn ghost" aria-label="Toggle menu">☰</button>
+      <input id="search" class="search" type="search" placeholder="Search cases, documents, personnel…">
+      <span id="userChip" class="chip">Not signed in</span>
+      <button id="themeBtn" class="btn ghost" aria-label="Toggle theme">◐</button>
+      <a id="loginBtn" class="btn" href="/api/auth/discord">Sign in with Discord</a>
+    </header>
+    <main id="view" tabindex="-1"></main>
+  </div>
+</div>
+<script src="assets/js/utilities.js"></script>
+<script src="assets/js/api.js"></script>
+<script src="assets/js/router.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+{"name":"doj-digital-command","private":true,"scripts":{"dev":"wrangler pages dev .","migrate":"wrangler d1 migrations apply doj-digital-command","deploy":"wrangler pages deploy ."},"devDependencies":{"wrangler":"^3"}}
