@@ -6,7 +6,3 @@ pages_build_output_dir = "."
 binding = "DB"
 database_name = "doj-digital-command"
 database_id = "REPLACE_WITH_D1_ID"
-
-[[r2_buckets]]
-binding = "BUCKET"
-bucket_name = "doj-drive"

@@ -9,7 +9,7 @@ Router.add('dashboard',async()=>{
  return head('Dashboard','Operational overview')+`<div class="grid">${Object.entries(s).map(([k,v])=>`<div class="card"><div class="n">${esc(v)}</div><div class="l">${esc(k)}</div></div>`).join('')}</div>`+
  (API.mode==='demo'?`<div class="card" style="margin-top:1rem"><div class="l">Sample chart (demo data)</div><div class="bars">${[3,5,2,6,4,7,5,8].map(h=>`<i style="height:${h*12}%"></i>`).join('')}</div></div>`:'')});
 Router.add('cases',async()=>head('Case Management','Cases, filings, hearings')+table([['case_number','Case #'],['title','Title'],['status','Status']],await list('cases',DEMO.cases)));
-Router.add('drive',async()=>head('Drive','Documents stored in R2')+'<div class="drop" id="drop">Drag files here to upload (PDF, DOCX, PNG, JPG; 25 MB max)</div>');
+Router.add('drive',async()=>head('Drive','Documents stored via Discord webhook')+'<div class="drop" id="drop">Drag files here to upload (PDF, DOCX, PNG, JPG; 9 MB max)</div>');
 document.addEventListener('dragover',e=>{if(e.target.closest&&e.target.closest('#drop'))e.preventDefault()});
 document.addEventListener('drop',async e=>{if(!(e.target.closest&&e.target.closest('#drop')))return;e.preventDefault();
  if(API.mode==='demo'){alert('Demo mode: uploads are disabled.');return}
